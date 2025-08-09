@@ -6,6 +6,7 @@ interface EducationItemProps {
   institution: string;
   period: string;
   description: string;
+  city: string;
 }
 
 const EducationItem = ({
@@ -13,6 +14,7 @@ const EducationItem = ({
   institution,
   period,
   description,
+  city,
 }: EducationItemProps) => {
   return (
     <div className="relative pl-8 not-last:pb-12">
@@ -27,7 +29,10 @@ const EducationItem = ({
           <div className="flex-shrink-0 size-9 bg-accent rounded-full flex items-center justify-center">
             <GraduationCap className="size-5 text-muted-foreground" />
           </div>
-          <span className="text-lg font-semibold">{institution}</span>
+          <div className="flex flex-col">
+            <span className="text-lg font-semibold">{institution}</span>
+            <span className="text-sm font-semibold">{city}</span>
+          </div>
         </div>
         <div>
           <h3 className="text-xl font-medium">{degree}</h3>
@@ -46,6 +51,7 @@ const Education = () => {
   const educations = [
     {
       degree: "Bachelor of Information Technology",
+      city: "Medan, Indonesia",
       institution: "UNIVERISTAS MIKROSKIL",
       period: "2022 - Present",
       description:
@@ -54,6 +60,7 @@ const Education = () => {
     {
       degree:
         "High School Diploma - Computer Systems Networking and Telecommunications",
+      city: "Silangkitang, Indonesia",
       institution: "SMK SWASTA MANDIRI AL-WASHLIYAH SILANGKITANG",
       period: "2018 - 2021",
       description:

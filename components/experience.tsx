@@ -6,6 +6,7 @@ interface ExperienceItemProps {
   company: string;
   period: string;
   description: string;
+  city: string;
 }
 
 const ExperienceItem = ({
@@ -13,6 +14,7 @@ const ExperienceItem = ({
   company,
   period,
   description,
+  city,
 }: ExperienceItemProps) => {
   return (
     <div className="relative pl-8 not-last:pb-12">
@@ -27,7 +29,10 @@ const ExperienceItem = ({
           <div className="flex-shrink-0 size-9 bg-accent rounded-full flex items-center justify-center">
             <Building2 className="size-5 text-muted-foreground" />
           </div>
-          <span className="text-lg font-semibold">{company}</span>
+          <div className="flex flex-col">
+            <span className="text-lg font-semibold">{company}</span>
+            <span className="text-sm font-semibold">{city}</span>
+          </div>
         </div>
         <div>
           <h3 className="text-xl font-medium">{title}</h3>
@@ -47,6 +52,7 @@ const Experience = () => {
     {
       title: "Mentor Front End Developer",
       company: "Dhuo Creative",
+      city: "Medan, Indonesia",
       period: "2024 - 2025",
       description:
         "Guided students in mastering modern front-end technologies such as React, API Integration and Bootstrap. Provided code reviews, best practice recommendations, and hands-on project support to help them build production-ready applications.",
@@ -54,6 +60,7 @@ const Experience = () => {
     {
       title: "Full Stack Developer",
       company: "Startup Dentaloka",
+      city: "Medan, Indonesia",
       period: "2024 - 2025",
       description:
         "Built and maintained Dentaloka, a freelance-style platform where dental professionals can post and manage job opportunities, and clients can connect with them for dental services. Developed responsive UIs, secure backend APIs, Firebase Auth integration, and ensured seamless collaboration between doctors and clients.",
@@ -61,6 +68,7 @@ const Experience = () => {
     {
       title: "Mentor Web Developer",
       company: "Dhuo Creative",
+      city: "Medan, Indonesia",
       period: "2023 - 2025",
       description:
         "Taught and guided aspiring web developers in HTML, CSS, JavaScript, and backend fundamentals (PHP, MySQL). Assisted in real-world project building, ensuring students understood both technical and collaborative aspects of web development.",
