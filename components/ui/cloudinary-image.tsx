@@ -25,7 +25,7 @@ export default function CloudinaryImage({
     cloud: { cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME },
   });
 
-  let img = cld.image(publicId);
+  const img = cld.image(publicId);
 
   if (width && height) {
     if (cropMode === "fill") {
