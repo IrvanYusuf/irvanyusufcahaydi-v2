@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { GithubLogo, XLogo } from "../icons";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import Image from "next/image";
@@ -79,7 +79,9 @@ const Navbar = () => {
         <Logo />
 
         {/* Desktop Menu */}
-        <NavMenu className="hidden md:block" />
+        <Suspense fallback={<div />}>
+          <NavMenu className="hidden md:block" />
+        </Suspense>
 
         <div className="flex items-center gap-2">
           <Button

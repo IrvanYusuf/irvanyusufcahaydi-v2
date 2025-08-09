@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { QueryClientProvider } from "@tanstack/react-query";
 import queryClient from "@/lib/queryClient";
+import HomeLayout from "@/layouts/home-layout";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -24,9 +25,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.className} antialiased`}>
         <QueryClientProvider client={queryClient}>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <HomeLayout>
+            <main>{children}</main>
+          </HomeLayout>
         </QueryClientProvider>
       </body>
     </html>
