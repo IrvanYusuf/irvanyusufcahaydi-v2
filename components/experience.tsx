@@ -36,7 +36,7 @@ const ExperienceItem = ({
             <span>{period}</span>
           </div>
         </div>
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground text-justify">{description}</p>
       </div>
     </div>
   );

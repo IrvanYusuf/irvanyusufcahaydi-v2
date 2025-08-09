@@ -30,7 +30,7 @@ const ProjectCard = ({ portfolio }: ProjectCardProps) => {
       {/* Content */}
       <div className="flex-1 flex flex-col p-6">
         <h3 className="text-xl font-semibold mb-2">{portfolio.name}</h3>
-        <p className="text-muted-foreground mb-4">
+        <p className="text-muted-foreground mb-4 text-justify">
           {truncateText(portfolio.desc ?? "", 100)}
         </p>
 
