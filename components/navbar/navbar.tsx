@@ -113,7 +113,9 @@ const Navbar = () => {
         </div>
       </div>
       {/* Mobile Menu */}
-      <NavbarMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Suspense fallback={<div />}>
+        <NavbarMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      </Suspense>
     </nav>
   );
 };
