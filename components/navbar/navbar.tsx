@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import NavbarMobile from "./navbar-mobile";
 
 export const menus = [
   {
@@ -31,22 +32,6 @@ export const menus = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
-
-  const [hash, setHash] = useState("");
-
-  useEffect(() => {
-    const updateHash = () => {
-      setHash(window.location.hash);
-    };
-
-    updateHash(); // set awal
-    window.addEventListener("hashchange", updateHash);
-
-    return () => {
-      window.removeEventListener("hashchange", updateHash);
-    };
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -128,32 +113,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* Mobile Menu */}
-      <div className={`lg:hidden overflow-hidden`}>
-        <div className="max-w-screen-md mx-auto">
-          <nav
-            className={`p-6 w-full ${
-              isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-            } rounded-2xl border-gray-200/50 transition-all duration-300 bg-white/95 backdrop-blur-md space-y-1`}
-          >
-            {menus.map((menu, index) => {
-              const isActive = `${pathname}${hash}` === menu.path;
-
-              return (
-                <Link
-                  key={index}
-                  href={menu.path}
-                  className={`block py-3 px-4 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all duration-200 ${
-                    isActive ? "bg-sky-50 text-sky-600" : ""
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {menu.name}
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-      </div>
+      <NavbarMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </nav>
   );
 };
