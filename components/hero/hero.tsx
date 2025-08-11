@@ -7,6 +7,7 @@ import GradientText from "../text/gradient-text";
 import ButtonGradient from "../button/button-gradient";
 import Statictic from "./statistic";
 import Link from "next/link";
+import ButtonDownloadCv from "../button/button-download-cv";
 
 const Hero = () => {
   return (
@@ -37,14 +38,7 @@ const Hero = () => {
           together! 🚀
         </p>
         <div className="mt-12 flex items-center justify-center gap-4">
-          <Button
-            size={"lg"}
-            className="text-base cursor-pointer group"
-            variant={"outline"}
-          >
-            <Download className="transform transition-all duration-300 ease-in-out group-hover:translate-y-[2px]" />
-            Download CV
-          </Button>
+          <ButtonDownloadCv />
           <Link href={"/#projects"}>
             <ButtonGradient size="lg" className="text-base group">
               See What I Do
