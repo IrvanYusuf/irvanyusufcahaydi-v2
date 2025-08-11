@@ -62,14 +62,20 @@ const ProjectCard = ({ portfolio }: ProjectCardProps) => {
               </Link>
             </ButtonGradient>
           )}
-          {portfolio.github_link && (
-            <Button variant="outline" className="shadow-none" asChild>
-              <Link href={portfolio.github_link} target="_blank">
-                <GithubLogo className="mr-1 h-4 w-4" />
-                View Code
-              </Link>
-            </Button>
-          )}
+          <Button
+            variant="outline"
+            className="shadow-none flex"
+            disabled={!portfolio.github_link}
+          >
+            <Link
+              href={portfolio.github_link ?? "/"}
+              target="_blank"
+              className="flex items-center"
+            >
+              <GithubLogo className="mr-1 h-4 w-4" />
+              View Code
+            </Link>
+          </Button>
         </div>
       </div>
     </div>
