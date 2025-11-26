@@ -50,6 +50,22 @@ const ExperienceItem = ({
 const Experience = () => {
   const experiences = [
     {
+      title: "Internship Full Stack Engineer",
+      company: "Pershing Global Solutions",
+      city: "Bali, Indonesia",
+      period: "22 September 2025 - 22 December 2025",
+      description:
+        "Served as a Full Stack Engineer in developing both internal and external web solutions. Responsible for building an efficient and responsive Internal Website using the Next.js (React) framework to improve team operations and communication. Additionally, designed and implemented Custom Fullstack Websites based on WordPress, including the development of authentication and converting design specifications from Figma into high-fidelity custom templates.",
+    },
+    {
+      title: "Internship Back End Laravel Developer",
+      company: "Goodsone",
+      city: "Tangerang, Indonesia",
+      period: "18 August 2025 - 18 November 2025",
+      description:
+        "Responsible for the development and quality improvement of the Laravel-based back-end application. Key tasks included refactoring existing code to enhance performance, and maintainability. Implemented an authentication log feature to record and monitor all user login and logout activities for security and audit purposes. Furthermore, actively involved in the technical documentation process for API endpoints, and system workflows using Confluence to ensure better team collaboration and system understanding.",
+    },
+    {
       title: "Mentor Front End Developer",
       company: "Dhuo Creative",
       city: "Medan, Indonesia",
