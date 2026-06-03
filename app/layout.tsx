@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "Shadcn UI Portfolio",
   description:
     "A beautiful portfolio template built with Shadcn UI, Tailwind CSS 4, and Next.js 15",
+  verification: {
+    google: "Pza2y2ExPzGvcc8ecV5A3lMWOGKLMww5Bh6BUtqBeos",
+  },
 };
 
 export default function RootLayout({
