@@ -33,14 +33,15 @@ export const NavMenu = ({ className }: NavMenuProps) => {
           const isActive = `${pathname}${hash}` === menu.path;
           return (
             <NavigationMenuItem key={index}>
-              <NavigationMenuLink
-                asChild
-                className={`block py-3 px-4 text-gray-700 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all duration-200 ${
-                  isActive ? "bg-sky-50 text-sky-600" : ""
-                }`}
+              <Link
+                href={menu.path}
+                className={cn(
+                  "block rounded-lg px-4 py-3 text-gray-700 transition-all hover:bg-sky-50 hover:text-sky-600",
+                  isActive && "bg-sky-50 text-sky-600",
+                )}
               >
-                <Link href={menu.path}>{menu.name}</Link>
-              </NavigationMenuLink>
+                {menu.name}
+              </Link>
             </NavigationMenuItem>
           );
         })}

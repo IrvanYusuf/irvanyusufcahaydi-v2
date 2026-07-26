@@ -17,8 +17,8 @@ const ButtonGradient = ({
     <Button
       size={size}
       className={cn(
-        "bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white px-8 py-4 shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 transition-all duration-300 group cursor-pointer",
-        className
+        "bg-gradient-to-r border border-sky-500 from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 transition-all duration-300 group cursor-pointer",
+        className,
       )}
     >
       {children}
